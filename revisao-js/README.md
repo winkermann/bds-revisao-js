@@ -1,5 +1,6 @@
 ### Este repositório tem como objetivo facilitar a revisão dos fundamentos essenciais do JavaScript
 Resumo feito baseado no curso de nivelamento do DevSuperior, **[referência](https://github.com/devsuperior/curso-nivelamento-javascript/tree/main)**
+
 Alguns trechos foram escritos com auxílio do ChatGPT.
 ## Tópicos básicos
 #### _Tipos de dados_
