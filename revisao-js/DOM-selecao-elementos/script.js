@@ -12,7 +12,7 @@ console.log(item1)
 console.log(items)
 console.log(card)
 
-console.log("- - - - - - - - - - - - - -")
+console.log("- - - - - EM DESUSO - - - - -")
 console.log(item2)
 console.log(cards)
 console.log(cards2)
