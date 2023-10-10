@@ -331,3 +331,52 @@ async function exemplo() {
 O uso de `async/await` simplifica o código assíncrono, tornando-o mais claro e fácil de entender, especialmente quando você precisa lidar com múltiplas operações assíncronas em sequência. Em vez de encadear várias Promises usando `.then()`, você pode escrever código assíncrono de forma quase síncrona, o que melhora significativamente a legibilidade do código.
 
 ## Introdução à manipulação de DOM
+### _Seleção de elementos_
+A **seleção de elementos** em JavaScript é o processo de escolher elementos HTML em uma página da web para manipulá-los dinamicamente.
+**Por ID:** Você pode selecionar um elemento usando seu ID exclusivo. Por exemplo:
+```javascript  
+var meuElemento = document.getElementById('meu-id');
+```
+ **Por Classe:** Você pode selecionar elementos por sua classe usando `getElementsByClassName` ou `querySelectorAll`. Por exemplo:
+    
+```javascript
+var elementosPorClasse = document.getElementsByClassName('minha-classe');
+var elementosPorClasse = document.querySelectorAll('.minha-classe');
+```
+    
+**Por Tag:** Você pode selecionar elementos por sua tag usando `getElementsByTagName`. Por exemplo:
+```javascript
+var elementosPorTag = document.getElementsByTagName('div');
+```
+**Por Seletor CSS:** Você pode usar `querySelector` para selecionar elementos usando seletores CSS. Por exemplo:
+```javascript
+var meuElemento = document.querySelector('#meu-id');
+var meuElemento = document.querySelector('.minha-classe');
+```
+### _Dataset_
+Em HTML, os **atributos de dados personalizados** (custom data attributes) permitem aos desenvolvedores armazenar informações privadas associadas aos elementos HTML. 
+Eles começam com "data-" seguido pelo nome do atributo personalizado. Esses atributos são úteis para armazenar dados adicionais em elementos HTML, acessíveis via JavaScript, sem serem visíveis para usuários ou motores de busca.
+```html
+<div  class="card"  data-product-id="32">
+	<p>Card 1</p>
+</div>
+<div  class="card"  data-product-id="45">
+	<p>Card 2</p>
+</div>
+```
+### _Eventos UI_ 
+Em JavaScript, eventos são ações ou ocorrências que acontecem no navegador do usuário, como cliques do mouse, pressionamentos de teclas, carregamento de uma página, submissões de formulários, entre outros. A linguagem JavaScript permite que você crie interatividade em páginas da web respondendo a esses eventos.
+Ao usar eventos, você pode desencadear a execução de funções ou scripts específicos quando o usuário interage com elementos na página, como botões, links, formulários, etc. Isso permite criar páginas web dinâmicas e responsivas.
+Aqui está um exemplo simples de como você pode usar eventos em JavaScript:
+```javascript
+// Obtém uma referência para o elemento de botão no HTML
+var meuBotao = document.getElementById('meu-botao');
+
+// Adiciona um evento de clique ao botão
+meuBotao.addEventListener('click', function() {
+    alert('Botão clicado!');
+});
+```
+Neste exemplo, o código JavaScript está esperando até que o botão com o ID 'meu-botao' seja clicado. Quando o botão é clicado, a função de alerta é acionada, exibindo uma caixa de diálogo com o texto "Botão clicado!".
+
+[JavaScript HTML DOM Events exermplos](https://www.w3schools.com/js/js_events_examples.asp)
