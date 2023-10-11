@@ -6,3 +6,34 @@
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
+
+html, body {
+  background-color: black;
+}
+
+.nav-container {
+  background-color: #EB5E28;
+  color: #FFFCF2;
+  height: 80px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-main h1 {
+  font-size: 36px;
+}
+
+.contact-link {
+  cursor: pointer;
+}
