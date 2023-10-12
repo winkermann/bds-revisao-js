@@ -1,7 +1,11 @@
 //responsável por controlar o formulário
 
+import Address from "../models/address.js";
+
 //função construtora. Será responsável por guardar as informações relevantes do módulo form-controller.
 function State() {
+  this.address = new Address();
+
   this.btnSave = null;
   this.btnClear = null;
 
