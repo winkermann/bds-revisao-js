@@ -1,7 +1,7 @@
 //responsável por controlar o formulário
 
 import Address from "../models/address.js";
-import * as requestService from '../services/request-service.js'
+import * as addressService from '../services/address-service.js'
 
 //função construtora. Será responsável por guardar as informações relevantes do módulo form-controller.
 function State() {
@@ -38,8 +38,6 @@ export function init() {
   state.btnClear.addEventListener('click', handleBtnClearClick);
   state.btnSave.addEventListener('click', handleBtnSaveClick);
 
-  
-  console.log(state);
 }
 
 async function handleBtnSaveClick(event) {
@@ -56,13 +54,24 @@ function handleInputNumberChange(event) {
   }
 }
 
-function handleInputCepChange(event) {
-  if (event.target.value == "" || event.target.value == " ") {
-    setFormError("cep", "Campo obrigatório")
-  } else {
-    setFormError("cep", "")
+async function handleInputCepChange(event) {
+  const cep = event.target.value;
+
+  try {
+  const address = await addressService.findByCep(cep);
+
+  state.inputCity.value = address.city;
+  state.inputStreet.value = address.street;
+  state.address = address;
+
+  setFormError("cep", "");
+  state.inputNumber.focus();
+  } catch (e) {
+    setFormError("cep", "Informe um CEP válido")
+    state.inputStreet.value = "";
+    state.inputCity.value = "";
   }
-}
+} 
 
 
 function handleBtnClearClick(event) {
