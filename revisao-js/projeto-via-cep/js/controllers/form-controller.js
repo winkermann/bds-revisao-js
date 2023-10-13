@@ -33,6 +33,9 @@ export function init() {
   state.errorNumber = document.querySelector('[data-error="number"]');
 
   state.inputNumber.addEventListener('change', handleInputNumberChange)
+  state.btnClear.addEventListener('click', handleBtnClearClick)
+
+
   
   console.log(state);
 }
@@ -43,6 +46,28 @@ function handleInputNumberChange(event) {
   } else {
     setFormError("number", "")
   }
+}
+
+function handleBtnClearClick(event) {
+  event.preventDefault();
+  clearForm();
+}
+
+const clearForm = () => {
+  // state.inputCep.value = "";
+  // state.inputStreet.value = "";
+  // state.inputNumber.value = "";
+  // state.inputCity.value = "";
+
+  // https://stackoverflow.com/questions/14589193/clearing-my-form-inputs-after-submission
+  const form = document.getElementsByName('newAddress')[0];
+  form.reset();
+  
+  setFormError("cep", "");
+  setFormError("number", "");
+
+  state.inputCep.focus();
+
 }
 
 function setFormError(key, value) {
