@@ -33,6 +33,7 @@ export function init() {
   state.errorNumber = document.querySelector('[data-error="number"]');
 
   state.inputNumber.addEventListener('change', handleInputNumberChange)
+  state.inputCep.addEventListener('change', handleInputCepChange)
   state.btnClear.addEventListener('click', handleBtnClearClick)
 
 
@@ -47,6 +48,15 @@ function handleInputNumberChange(event) {
     setFormError("number", "")
   }
 }
+
+function handleInputCepChange(event) {
+  if (event.target.value == "" || event.target.value == " ") {
+    setFormError("cep", "Campo obrigatório")
+  } else {
+    setFormError("cep", "")
+  }
+}
+
 
 function handleBtnClearClick(event) {
   event.preventDefault();
