@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
+@import 'modal.css';
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -94,6 +96,14 @@ html, body {
   border-radius: 4px;
   font-weight: 700;
   font-size: 14px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: #CCC5B9;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  color: #403D39;
 }
 
 .btn:nth-child(even) {
