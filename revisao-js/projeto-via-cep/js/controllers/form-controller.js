@@ -2,6 +2,7 @@
 
 import Address from "../models/address.js";
 import * as addressService from '../services/address-service.js'
+import * as listController from './list-controller.js';
 
 //função construtora. Será responsável por guardar as informações relevantes do módulo form-controller.
 function State() {
@@ -43,7 +44,7 @@ export function init() {
 
 async function handleBtnSaveClick(event) {
   event.preventDefault();
-  console.log(state.address);
+  listController.addCard(state.address);
 }
 
 function handleInputNumberChange(event) {
