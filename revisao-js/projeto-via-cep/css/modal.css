@@ -29,5 +29,21 @@
 }
 
 .modal-content {
+  display: flex;
   margin: 40px 0;
+}
+
+.modal-content a {
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+}
+
+.modal-content a:hover {
+  color: #EB5E28;
+}
+
+.modal-content img {
+  margin-right: 20px;
+
 }
